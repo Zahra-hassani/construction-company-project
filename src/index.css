@@ -1,6 +1,11 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@theme{
+  --color-brand: #ffb703;
+}
+
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -108,6 +113,33 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.556 0 0);
+}
+
+@property --degree{
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@layer components{
+  .slick-slide > div{
+    display: flex !important;
+    justify-content: center;
+  }
+  .moto{
+    background-image: conic-gradient(from var(--degree),#ffb703,#978989,#ffa000,#ffb100);
+    color: transparent;
+    background-clip: text;
+    animation: bg 3s infinite linear;
+  }
+  @keyframes bg{
+    0%{
+      --degree: 0deg;
+    }
+    100%{
+      --degree: 360deg;
+    }
+  }
 }
 
 @layer base {

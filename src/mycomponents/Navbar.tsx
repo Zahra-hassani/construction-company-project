@@ -53,7 +53,7 @@ export default function Navbar(){
                 </div>
                 <div className={`${isOpen?"flex":"hidden"} translate-y-50 p-5 bg-stone-100/30 backdrop-blur-md text-base text-black h-fit w-full font-bold flex-col items-center space-y-4`}>
                 {navList.map((item,idx)=>(
-                    <a key={idx} href={item.href} className="relative text-blue-600 after:content-[''] after:w-0 after:transition-all after:duration-500 after:h-0.5 after:bg-sky-500 after:absolute after:left-0 after:bottom-0 hover:after:w-full">{item.title}</a>
+                    <a key={idx} href={item.href} className="relative text-blue-600 after:content-[''] after:w-0 after:transition-all after:duration-500 after:h-0.5 after:bg-brand after:absolute after:left-0 after:bottom-0 hover:after:w-full">{item.title}</a>
                 ))}
             <div>
                 <Button variant="outline">Get weather</Button>
