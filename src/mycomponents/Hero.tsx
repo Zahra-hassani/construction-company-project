@@ -24,7 +24,7 @@ responsive: [
   }
 },
 {
-  breakpoint: 780,
+  breakpoint: 768,
   settings: {
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -80,9 +80,9 @@ export default function Hero(){
         },
     ] 
     return (
-        <div className="h-screen w-full flex justify-between items-center">
-            <div className="flex-1 min-w-0 flex flex-col items-center gap-3 p-4">
-                <h1 className="lg:text-4xl md:text-2xl moto text-2xl text-center font-bold font-sans">
+        <div className="lg:h-screen h-fit w-full grid md:grid-cols-2 grid-cols-1 gap-0">
+            <div className=" min-w-0 flex lg:justify-center lg:min-h-screen md:justify-center md:h-full h-fit flex-col items-center gap-3 p-4">
+                <h1 className="lg:text-5xl md:text-2xl moto text-2xl text-center font-bold font-sans">
                     New house, new life, Bringing your dreams to reality
                 </h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente repudiandae neque explicabo dicta odit quibusdam cum saepe iusto assumenda officia modi</p>
@@ -91,11 +91,11 @@ export default function Hero(){
                 <Button variant="outline" className="bg-brand text-white hover:text-brand hover:bg-white"><a href="">Explore more</a></Button>
                 </div>
             </div>
-            <div className="flex-1 min-w-0 flex flex-col items-center gap-4 p-4">
-                <h1 className="md:text-2xl text-xl font-bold font-sans">Our Expert Team</h1>
-                <Slider {...settings} className="w-full">
+            <div className=" min-w-0 flex flex-col items-center gap-4 p-4 h-fit">
+                <h1 className="md:text-2xl text-xl font-bold font-sans">Our Expert Engineers</h1>
+                <Slider {...settings} className="w-full z-10">
                     {engineers.map((engineer,index)=> (
-                        <div key={index} className="lg:h-96 md:h-80 w-52 mt-4 mr-4 relative group bg-white">
+                        <div key={index} className="lg:h-96 md:h-80 h-60 w-52 mt-4 mr-4 relative group bg-white">
                             <div className="h-0 w-full flex justify-center flex-col items-center absolute top-0 left-0 gap-3 bg-white/40 backdrop-blur-xs text-black opacity-0 group-hover:opacity-100 group-hover:h-full transition-all duration-300">
                                 <h1 className="font-bold text-xl">{engineer.name}</h1>
                                 <h1 className="font-bold text-xl">{engineer.role}</h1>

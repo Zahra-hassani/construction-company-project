@@ -32,18 +32,18 @@ export default function Navbar(){
     ]
     const [isOpen, setIsOpen] = useState(false);
     return(
-        <div className="h-20 w-full bg-stone-100/40 shadow backdrop-blur-sm px-4 sticky top-0 left-0">
+        <div className="h-20 w-full bg-stone-100/40 shadow backdrop-blur-sm px-4 z-50 sticky top-0 left-0">
             <div className="lg:flex hidden h-full justify-between items-center gap-4">
             <div>
                 logo
             </div>
             <div className="text-base font-bold flex justify-between items-center space-x-4">
                 {navList.map((item,idx)=>(
-                    <a key={idx} href={item.href} className="relative after:content-[''] after:w-0 after:transition-all after:duration-500 after:h-0.5 after:bg-sky-500 after:absolute after:left-0 after:bottom-0 hover:after:w-full">{item.title}</a>
+                    <a key={idx} href={item.href} className="relative after:content-[''] after:w-0 after:transition-all after:duration-500 after:h-0.5 after:bg-brand after:absolute after:left-0 after:bottom-0 hover:after:w-full">{item.title}</a>
                 ))}
             </div>
             <div className="lg:block hidden">
-                <Button variant="outline">Get weather</Button>
+                <Button variant="outline" className="bg-brand text-white hover:text-brand hover:bg-white">Get weather</Button>
             </div>
             </div>
             {/* moblie & tablet mode */}
@@ -56,7 +56,7 @@ export default function Navbar(){
                     <a key={idx} href={item.href} className="relative text-blue-600 after:content-[''] after:w-0 after:transition-all after:duration-500 after:h-0.5 after:bg-brand after:absolute after:left-0 after:bottom-0 hover:after:w-full">{item.title}</a>
                 ))}
             <div>
-                <Button variant="outline">Get weather</Button>
+                <Button variant="outline" className="bg-brand text-white hover:text-brand hover:bg-white">Get weather</Button>
             </div>
                 </div>
             <div className="lg:hidden block">
