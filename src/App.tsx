@@ -1,11 +1,11 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import Home from "./mycomponents/Home"
-import Services from "./mycomponents/Services"
-import Blog from "./mycomponents/Blog"
-import About from "./mycomponents/About"
-import Contact from "./mycomponents/Contact"
-import Weather from "./mycomponents/Weather"
-import NotFound from "./mycomponents/NotFound"
+import Home from "./Pages/Home"
+import Services from "./Pages/Services"
+import Blog from "./Pages/Blog"
+import About from "./Pages/About"
+import Contact from "./Pages/Contact"
+import Weather from "./Pages/Weather"
+import NotFound from "./Pages/NotFound"
 import Navbar from "./mycomponents/Navbar"
 
 function App() {

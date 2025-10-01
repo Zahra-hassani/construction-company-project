@@ -11,7 +11,7 @@ slidesToShow: 2,
 slidesToScroll: 1,
 initialSlide: 1,
 autoplay: true,
-arrows: true,
+arrows: false,
 autoplaySpeed: 1500,
 responsive: [
 {

@@ -35,7 +35,7 @@ export default function Navbar(){
         <div className="h-20 w-full bg-stone-100/40 shadow backdrop-blur-sm px-4 z-50 sticky top-0 left-0">
             <div className="lg:flex hidden h-full justify-between items-center gap-4">
             <div>
-                logo
+                <img src="./img/Logo1.png" className="h-20 w-20"  alt="" />
             </div>
             <div className="text-base font-bold flex justify-between items-center space-x-4">
                 {navList.map((item,idx)=>(
@@ -49,7 +49,7 @@ export default function Navbar(){
             {/* moblie & tablet mode */}
             <div className="flex lg:hidden h-full justify-between items-center space-x-4">
                 <div>
-                    logo
+                    <img src="./img/Logo1.png" className="h-20 w-20" alt="" />
                 </div>
                 <div className={`${isOpen?"flex":"hidden"} translate-y-50 p-5 bg-stone-100/30 backdrop-blur-md text-base text-black h-fit w-full font-bold flex-col items-center space-y-4`}>
                 {navList.map((item,idx)=>(

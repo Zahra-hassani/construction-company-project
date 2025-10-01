@@ -126,6 +126,10 @@
     display: flex !important;
     justify-content: center;
   }
+  .slick-test{
+    display: flex !important;
+    justify-content: center;
+  }
   .moto{
     background-image: conic-gradient(from var(--degree),#ffb703,#978989,#ffa000,#ffb100);
     color: transparent;
