@@ -21,7 +21,7 @@ export default function Footer(){
                 <h1 className="font-bold text-2xl md:text-3xl py-3">Contact Us</h1>
                 <p className="flex gap-2">
                     <Mail size={30} />
-                    <a href="#">www.sharifigroup@gmail.com</a>
+                    <a href="#">www.sharifico@gmail.com</a>
                 </p>
                 <p className="flex gap-2">
                     <PhoneCall size={30} />

@@ -9,7 +9,7 @@ dots: false,
 infinite: true,
 speed: 500,
 slidesToShow: 4,
-slidesToScroll: 2,
+slidesToScroll: 1,
 initialSlide: 1,
 autoplay: true,
 arrows: false,
@@ -50,28 +50,28 @@ export default function Testimonial(){
             message: "The company services was great. It was a great Housing Project with 20 sqaure meter domine, and Iam really satisfied."
         },
         {
-            name: "Ronald Green",
-            imgUrl: "./img/Test1.jpg",
+            name: "Cara Goldberg",
+            imgUrl: "./img/test2.jpg",
             message: "The company services was great. It was a great Housing Project with 20 sqaure meter domine, and Iam really satisfied."
         },
         {
-            name: "Ronald Green",
-            imgUrl: "./img/Test1.jpg",
+            name: "Faiz Brown",
+            imgUrl: "./img/test3.jpeg",
             message: "The company services was great. It was a great Housing Project with 20 sqaure meter domine, and Iam really satisfied."
         },
         {
-            name: "Ronald Green",
-            imgUrl: "./img/Test1.jpg",
+            name: "Daren George",
+            imgUrl: "./img/test4.jpeg",
             message: "The company services was great. It was a great Housing Project with 20 sqaure meter domine, and Iam really satisfied."
         },
         {
-            name: "Ronald Green",
-            imgUrl: "./img/Test1.jpg",
+            name: "Selena Ford",
+            imgUrl: "./img/test5.jpeg",
             message: "The company services was great. It was a great Housing Project with 20 sqaure meter domine, and Iam really satisfied."
         },
         {
-            name: "Ronald Green",
-            imgUrl: "./img/Test1.jpg",
+            name: "Laura White",
+            imgUrl: "./img/test6.jpg",
             message: "The company services was great. It was a great Housing Project with 20 sqaure meter domine, and Iam really satisfied."
         },
     ]
