@@ -1,5 +1,11 @@
+import AboutTeam from "@/mycomponents/AboutTeam";
+import OurTeam from "@/mycomponents/OurTeam";
+
 export default function About(){
     return(
-        <div>About page</div>
+        <div>
+            <AboutTeam />
+            <OurTeam />
+        </div>
     )
 }

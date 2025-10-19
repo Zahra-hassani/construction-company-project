@@ -7,13 +7,14 @@ import Contact from "./Pages/Contact"
 import Weather from "./Pages/Weather"
 import NotFound from "./Pages/NotFound"
 import Navbar from "./mycomponents/Navbar"
+import Footer from "./mycomponents/Footer"
 
 function App() {
 
   return (
     <div  className="relative">
-      <Navbar />
       <BrowserRouter>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
@@ -23,6 +24,7 @@ function App() {
         <Route path="/weather" element={<Weather />} />
         <Route path="/*" element={<NotFound />} />
       </Routes>
+      <Footer />
       </BrowserRouter>
     </div>
   )

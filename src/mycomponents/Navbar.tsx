@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { useState } from "react"
+import { Link } from "react-router-dom";
 
 export default function Navbar(){
     const navList = [
@@ -39,7 +40,7 @@ export default function Navbar(){
             </div>
             <div className="text-base font-bold flex justify-between items-center space-x-4">
                 {navList.map((item,idx)=>(
-                    <a key={idx} href={item.href} className="relative after:content-[''] after:w-0 after:transition-all after:duration-500 after:h-0.5 after:bg-brand after:absolute after:left-0 after:bottom-0 hover:after:w-full">{item.title}</a>
+                    <Link key={idx} to={item.href} className="relative after:content-[''] after:w-0 after:transition-all after:duration-500 after:h-0.5 after:bg-brand after:absolute after:left-0 after:bottom-0 hover:after:w-full">{item.title}</Link>
                 ))}
             </div>
             <div className="lg:block hidden">
@@ -53,7 +54,7 @@ export default function Navbar(){
                 </div>
                 <div className={`${isOpen?"flex":"hidden"} translate-y-50 p-5 bg-stone-100/30 backdrop-blur-md text-base text-black h-fit w-full font-bold flex-col items-center space-y-4`}>
                 {navList.map((item,idx)=>(
-                    <a key={idx} href={item.href} className="relative text-blue-600 after:content-[''] after:w-0 after:transition-all after:duration-500 after:h-0.5 after:bg-brand after:absolute after:left-0 after:bottom-0 hover:after:w-full">{item.title}</a>
+                    <Link key={idx} to={item.href} className="relative text-blue-600 after:content-[''] after:w-0 after:transition-all after:duration-500 after:h-0.5 after:bg-brand after:absolute after:left-0 after:bottom-0 hover:after:w-full">{item.title}</Link>
                 ))}
             <div>
                 <Button variant="outline" className="bg-brand text-white hover:text-brand hover:bg-white">Get weather</Button>
