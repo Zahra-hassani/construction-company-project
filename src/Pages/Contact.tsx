@@ -1,5 +1,9 @@
+import ContactUs from "@/mycomponents/ContactUs";
+
 export default function Contact(){
     return(
-        <div>Contact page</div>
+        <div>
+            <ContactUs />
+        </div>
     )
 }
