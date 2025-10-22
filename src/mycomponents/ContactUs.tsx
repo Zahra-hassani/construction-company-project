@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { FacebookIcon, Mail, Phone } from "lucide-react";
 import { useState } from "react";
+import emailjs from '@emailjs/browser';
+import toast, { Toaster } from 'react-hot-toast';
 
 export default function ContactUs(){
     const [name,setName] = useState("");
@@ -10,15 +12,34 @@ export default function ContactUs(){
     function handleSubmit(e:any){
         e.preventDefault();
         const public_key = "po8ME3bb-qOm-rDfA";
-        const template_id = "";
+        const template_id = "template_x6s629d";
         const service_id = "service_e3vbiqd";
-        const content = {
+        const content:{from_name:string,from_email:string,subject:string, to_name:string,message:string} = {
             from_name: name,
             from_email: email,
             subject: subject,
             to_name: "Zahra Hassani",
             message: message
         }
+        const toaster = ()=>toast("Sended successfully");
+        emailjs
+      .send(service_id, template_id, content, {
+        publicKey: public_key,
+      })
+      .then(
+        () => {
+          alert("Sended successfully");
+          toaster();
+          setName("");
+          setEmail("");
+          setSubject("");
+          setMessage("");
+        },
+        () => {
+          alert('FAILED...');
+        },
+      );
+
     }
     return (
         <div className="h-fit w-full lg:w-6xl mx-auto flex flex-col lg:flex-row lg:justify-between justify-between items-center lg:gap-0 gap-4 p-4">
@@ -37,8 +58,20 @@ export default function ContactUs(){
                 <input value={name} onChange={(e)=> setName(e.target.value)} type="text" placeholder="Your name" className="px-3 py-1 border border-brand rounded shadow" />
                 <input value={email} onChange={(e)=> setEmail(e.target.value)} type="email" placeholder="email" className="px-3 py-1 border border-brand rounded shadow" />
                 <input value={subject} onChange={(e)=> setSubject(e.target.value)} type="text" placeholder="subject" className="px-3 py-1 border border-brand rounded shadow" />
-                <textarea value={message} onChange={(e)=> setMessage(e.target.value)} name="" placeholder="Enter Your message" id="" className="px-3 py-1 h-38 w-full border border-brand rounded shadow"></textarea>
+                <textarea value={message} onChange={(e)=> setMessage(e.target.value)} name="" placeholder="Enter Your message" id="" className="px-3 py-1 h-30 w-full border border-brand rounded shadow"></textarea>
                 <Button className="text-white shadow text-xl bg-brand hover:text-brand hover:bg-white font-bold">Send</Button>
+                <Toaster
+                 position="bottom-right"
+                 toast-options={{
+                    success:{
+                        duration: 3000,
+                        style:{
+                            background:'#363636',
+                            font: 34
+                        }
+                    }
+                 }}
+                 />
             </form>
             </div>
         </div>

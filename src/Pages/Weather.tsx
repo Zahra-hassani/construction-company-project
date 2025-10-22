@@ -1,5 +1,9 @@
+import GetWeather from "@/mycomponents/GetWeather";
+
 export default function Weather(){
     return(
-        <div>Weather page</div>
+        <div>
+            <GetWeather />
+        </div>
     )
 }
