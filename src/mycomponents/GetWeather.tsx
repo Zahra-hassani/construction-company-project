@@ -1,7 +1,7 @@
 import { useEffect, useState, useTransition } from "react";
 
 const API_KEY = "f6839771ea9e2b10078df39b4529df81";
-const city = "Kabul";
+const city = "London";
 const URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_KEY}`;
 
 export default function GetWeather(){

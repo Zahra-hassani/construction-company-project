@@ -1,4 +1,5 @@
 import { FacebookIcon, InstagramIcon, Mail, PhoneCall, TwitterIcon, YoutubeIcon } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Footer(){
     return (
@@ -11,17 +12,17 @@ export default function Footer(){
             </div>
             <div className="flex flex-col gap-2 items-center">
                 <h1 className="font-bold text-2xl md:text-3xl py-3">Pages</h1>
-                <p className="px-2 hover:px-5 text-black hover:text-brand hover:font-bold transition-all duration-300"><a href="/">Home</a></p>
-                <p className="px-2 hover:px-5 text-black hover:text-brand hover:font-bold transition-all duration-300"><a href="/blog">Blog</a></p>
-                <p className="px-2 hover:px-5 text-black hover:text-brand hover:font-bold transition-all duration-300"><a href="/services">Services</a></p>
-                <p className="px-2 hover:px-5 text-black hover:text-brand hover:font-bold transition-all duration-300"><a href="/about">About Us</a></p>
-                <p className="px-2 hover:px-5 text-black hover:text-brand hover:font-bold transition-all duration-300"><a href="/contact">Contact Us</a></p>
+                <p className="px-2 hover:px-5 text-black hover:text-brand hover:font-bold transition-all duration-300"><Link to="/">Home</Link></p>
+                <p className="px-2 hover:px-5 text-black hover:text-brand hover:font-bold transition-all duration-300"><Link to="/blog">Blog</Link></p>
+                <p className="px-2 hover:px-5 text-black hover:text-brand hover:font-bold transition-all duration-300"><Link to="/services">Services</Link></p>
+                <p className="px-2 hover:px-5 text-black hover:text-brand hover:font-bold transition-all duration-300"><Link to="/about">About Us</Link></p>
+                <p className="px-2 hover:px-5 text-black hover:text-brand hover:font-bold transition-all duration-300"><Link to="/contact">Contact Us</Link></p>
             </div>
             <div className="flex flex-col gap-2 items-start">
                 <h1 className="font-bold text-2xl md:text-3xl py-3">Contact Us</h1>
                 <p className="flex gap-4">
                     <Mail size={30} />
-                    <a href="#">www.sharifico@gmail.com</a>
+                    <Link to="#">www.sharifico@gmail.com</Link>
                 </p>
                 <p className="flex gap-4">
                     <PhoneCall size={30} />
